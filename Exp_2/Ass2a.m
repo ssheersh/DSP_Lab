@@ -40,7 +40,6 @@ x=linspace(-pi,pi,1024);
 freqz(h_hm,1,x);
 %freqz(h_b,1,x);
 
-saveas(gcf, 'freqz_ham_512.png')
 
 function w = Rect(n, N) % Rectangular window
     if n<N

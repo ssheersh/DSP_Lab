@@ -6,6 +6,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{booktabs,tabu}
+\usepackage[section]{placeins}
 
 
 \title{Experiment 1: Basic Filter Design}
@@ -40,7 +41,7 @@
 \section{Objectives}
 \begin{enumerate}
   \item To design FIR filters for various orders and cutoff frequencies.
-  \item To assess whterhe pasband and stop band frequencies are attenuated by the filter designed.
+  \item To assess whether passband and stop band frequencies are attenuated by the filter designed.
   \item To assess the response of such FIR filters to noise contaminated signals. 
 \end{enumerate}
 
@@ -80,74 +81,102 @@
 
 
 \section{Observation Tables, Graphs and Diagrams}
-Outputs of the \texttt{freqz} function
 \subsection{Rectangular Window}
+\begin{center}
+\begin{tabular}{||c c c c||} 
+ \hline
+ N & Transition Width (kHz) & First Side Lobe (dB) & Max Attenuation (dB)\\ [0.5ex] 
+ \hline\hline
+ 8 & 2.30 & -19.4 & -45 \\ 
+ 64 & 0.25 & -20.9 & -51 \\
+ 512 & 0.02 & -21.1 & -70 \\   
+ \hline
+\end{tabular}
+\end{center}
+Outputs of the \texttt{freqz} function
   \subsubsection{N=8}
-  \begin{figure}[!ht]
+  \begin{figure}[!htb]
   \includegraphics[width=10cm]{freqz_rect_8.png}
   \end{figure}
   \subsubsection{N=64}
-  \begin{figure}[!ht]
+  \begin{figure}[!htb]
   \includegraphics[width=10cm]{freqz_rect_64.png}
   \end{figure}
   \subsubsection{N=512}
-  \begin{figure}[!ht]
+  \begin{figure}[!htb]
   \includegraphics[width=10cm]{freqz_rect_512.png}
   \end{figure}
 \subsection{Triangular Window}
+\begin{center}
+\begin{tabular}{||c c c c||} 
+ \hline
+ N & Transition Width (kHz) & First Side Lobe (dB) & Max Attenuation (dB)\\ [0.5ex] 
+ \hline\hline
+ 8 & 2.63 & -20.9 & -26 \\ 
+ 64 & 0.28 & -20.6 & -37 \\
+ 512 & 0.05 & -20.7 & -60 \\   
+ \hline
+\end{tabular}
+\end{center}
+
   \subsubsection{N=8}
-  \begin{figure}[!ht]
+  \begin{figure}[!htb]
   \includegraphics[width=10cm]{freqz_tri_8.png}
   \end{figure}
   \subsubsection{N=64}
-  \begin{figure}[!ht]
+  \begin{figure}[!htb]
   \includegraphics[width=10cm]{freqz_tri_64.png}
   \end{figure}
   \subsubsection{N=512}
-  \begin{figure}[!ht]
+  \begin{figure}[!htb]
   \includegraphics[width=10cm]{freqz_tri_512.png}
   \end{figure} 
 \subsection{Hanning Window}
   \subsubsection{N=8}
-  \begin{figure}[!ht]
+  \begin{figure}[!htb]
   \includegraphics[width=10cm]{freqz_han_8.png}
   \end{figure}
   \subsubsection{N=64}
-  \begin{figure}[!ht]
+  \begin{figure}[!htb]
   \includegraphics[width=10cm]{freqz_han_64.png}
   \end{figure}
   \subsubsection{N=512}
-  \begin{figure}[!ht]
+  \begin{figure}[!htb]
   \includegraphics[width=10cm]{freqz_han_512.png}
   \end{figure}
 \subsection{Hamming Window}
   \subsubsection{N=8}
-  \begin{figure}[!ht]
+  \begin{figure}[!htb]
   \includegraphics[width=10cm]{freqz_ham_8.png}
   \end{figure}
 
   \subsubsection{N=64}
-  \begin{figure}[!ht]
+  \begin{figure}[!htb]
   \includegraphics[width=10cm]{freqz_ham_64.png}
   \end{figure}
 
   \subsubsection{N=512}
-  \begin{figure}[!ht]
+  \begin{figure}[!htb]
   \includegraphics[width=10cm]{freqz_ham_512.png}
   \end{figure}
 
 \subsection{Blackmann Window}
   \subsubsection{N=8}
-  \begin{figure}[!ht]
+  \begin{figure}[!htb]
   \includegraphics[width=10cm]{freqz_bl_8.png}
   \end{figure}
 
   \subsubsection{N=64}
-  \begin{figure}[!ht]
+  \begin{figure}[!htb]
   \includegraphics[width=10cm]{freqz_bl_64.png}
   \end{figure}
   \subsubsection{N=512}
-  \begin{figure}[!ht]
+  \begin{figure}[!htb]
   \includegraphics[width=10cm]{freqz_bl_512.png}
   \end{figure}
+
+\section{Discussion: Samyak Sheersh}
+\begin{enumerate}
+  \item
+\end{enumerate}
 \end{document}

@@ -1,0 +1,11 @@
+// i from 1 to 4, lower frequencies
+// j = from 1 to 4 higher frequencies
+
+// max number of key presses is N
+
+int t = 0; // max instance of time
+
+while(t < T) {
+    int t_ = rand() % N;
+    int f1
+}
